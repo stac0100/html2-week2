@@ -150,3 +150,39 @@ h4{
 /************************************************************
                     Class Styles
 ************************************************************/
+/* only target the ul inside the nav*/
+nav ul {
+    display: flex;
+
+    /* flex-direction changes the order of the content - row-reverse will (by default) read
+    right-to-left, and column-reverse will read bottom to top
+    flex-direction: row-reverse; */
+
+    padding: 10px 0;
+    justify-content: space-between;
+
+    /* height:100px;
+    align items will position the content along the cross axis (by default, column)
+    align-items: center;*/
+}
+
+nav ul li {
+    background-color: burlywood;
+    /* flex-grow allows the children to grow to fill the available space */
+    flex-grow: 1;
+    flex-basis: 0; /* do not pay attention to the content */
+    /* flex-basis 0 will make the items ignore the size of the content inside of them */
+}
+
+nav ul li a{
+    display: block;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: darkblue;
+}
+
+nav ul li:nth-child(2){
+    /*flex-grow: 2;*/
+}
